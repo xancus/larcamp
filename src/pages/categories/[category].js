@@ -1,4 +1,5 @@
 import Layout from '@/components/Layout'
+import { useRouter } from 'next/router'
 import Header from '@/components/Header'
 import { Inter } from 'next/font/google'
 import CategoriesMenu from '@/components/CategoriesMenu'
@@ -8,9 +9,9 @@ const font = Inter({
   subsets: ['latin']
 })
 
-export default function Home() {
-  const category = 'all'
-
+export default function Category () {
+  const router = useRouter()
+  const { category } = router.query
   return (
     <div className={font.className}>
       <div className='bg-light-blue mx-auto'>

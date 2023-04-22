@@ -1,0 +1,38 @@
+
+{
+    "products": [{
+        "id": 1,
+        "name": "Adder Dermo Eco",
+        "slug": "adder-dermo-eco",
+        "description": "test-description",
+        "category": "body",
+        "image": "/products/ADDER DERMO ECO_5L_GARRAFA BLANCA.png",
+        "size":[]
+    },{
+        "id": 2,
+        "name": "Adder Dermo Light 5L",
+        "slug": "adder-dermo-light-5l",
+        "description": "test-description-adder-dermo-light",
+        "category": "body",
+        "image": "/products/ADDER DERMO ECO_5L_GARRAFA BLANCA.png",
+        "size":["5L"]
+    },{
+        "id": 3,
+        "name": "Adder micro past",
+        "slug": "adder-micro-past",
+        "description": "test-description-adder-micro-past",
+        "category": "body",
+        "image": "/products/ADDER micro past.png",
+        "size":[]
+    },
+    {
+        "id": 4,
+        "name": "Amon Tox",
+        "slug": "amon-tox",
+        "description": "test-description-amon-tox",
+        "category": "floor",
+        "image": "/products/amon tox 5kg.png",
+        "size":["5kg"]
+    }],
+    "top_products":[1,3]
+}
