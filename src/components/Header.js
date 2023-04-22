@@ -7,7 +7,7 @@ export default function Header() {
       <nav class='flex items-center justify-between py-3'>
         <div class='flex items-center'>
           <Link href='/'>
-            <Image src='/larcamp_logo.png' alt='Larcamp' className='h-auto mr-4 max-w-xs' width={500} height={500} />
+            <Image src='/larcamp_logo.PNG' alt='Larcamp' className='h-auto mr-4 max-w-xs' width={500} height={500} />
           </Link>
         </div>
         <div class='flex items-center flex-direction-row flex-wrap-nowrap gap-4 h-12'>
