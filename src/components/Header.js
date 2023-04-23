@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <div className='sm:max-w-4xl px-5 sm:px-5 md:px-5 lg:px-0 md:max-w-4xl lg:max-w-5xl lg:max-w-7xl mx-auto'>
-      <nav className='flex items-center justify-between py-3'>
+      <nav className='flex items-center justify-between py-3 max-h-[100px]'>
         <div className='flex items-center'>
           <Link href='/'>
             <Image src='https://res.cloudinary.com/dj7zyx57u/image/upload/v1682181568/LARCAMP/larcamp_logo_zunzvt.png' alt='Larcamp' className='h-auto mr-4 max-w-[200px] md:max-w-[300px]' width={500} height={500} />

@@ -46,7 +46,7 @@ export default function ProductId () {
   }, [productData?.category])
 
   return (
-    <div>
+    <div className='mb-8'>
       <div className='bg-light-blue mx-auto'>
         <Header />
       </div>
