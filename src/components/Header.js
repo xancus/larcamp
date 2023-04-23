@@ -37,11 +37,11 @@ export default function Header() {
               <div className='border border-teal-100 separator h-full border' />
             </div>
             <div className='flex flex-direction-row gap-4 h-full place-items-center'>
-              <Link href='#' className='font-semibold hover:text-teal-100 uppercase text-xs'>Quiénes somos</Link>
+              <Link href='/info' className='font-semibold hover:text-teal-100 uppercase text-xs'>Quiénes somos</Link>
               <div className='border border-teal-100 separator h-full border' />
             </div>
             <div className='flex flex-direction-row gap-4 h-full place-items-center'>
-              <Link href='#' className='font-semibold py-2 hover:text-teal-100 uppercase text-xs'>Realiza tu pedido</Link>
+              <Link href='/info' className='font-semibold py-2 hover:text-teal-100 uppercase text-xs'>Realiza tu pedido</Link>
             </div>
           </div>
           {isOpen && (

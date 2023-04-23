@@ -2,6 +2,7 @@ import Layout from '@/components/Layout'
 import Header from '@/components/Header'
 import { Inter } from 'next/font/google'
 import CategoriesMenu from '@/components/CategoriesMenu'
+import Footer from '@/components/Footer'
 
 const font = Inter({
   weight: ['400', '700'],
@@ -17,9 +18,10 @@ export default function Home() {
         <Header />
       </div>
       <CategoriesMenu />
-      <div className='max-w-7xl bg-white mx-auto mb-4'>
+      <div className='max-w-7xl bg-white mx-auto'>
         <Layout category={category} />
       </div>
+      <Footer />
     </div>
   )
 }
