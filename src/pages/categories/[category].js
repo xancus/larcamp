@@ -18,7 +18,7 @@ export default function Category () {
         <Header />
       </div>
       <CategoriesMenu />
-      <div className='max-w-7xl bg-white mx-auto mb-4'>
+      <div className='sm:px-5 sm:max-w-4xl md:max-w-4xl lg:max-w-7xl bg-white mx-auto mb-4'>
         <Layout category={category} />
       </div>
     </div>

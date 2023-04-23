@@ -1,4 +1,4 @@
-import Products from '@/components/Products'
+import Products from './Products'
 import { useState } from 'react'
 
 export default function Layout({ category }) {
@@ -26,17 +26,17 @@ export default function Layout({ category }) {
   }
   return (
     <div className='flex flex-wrap gap-4 lg:flex-nowrap'>
-      <div className='p-5 lg:w-auto lg:min-w-150 w-full bg-gray-200 h-fit min-h-screen'>
+      <div className='p-5 lg:w-auto lg:min-w-150 w-full bg-gray-200 sm:h-auto'>
         <div className='pb-2'>
           <form onSubmit={handleSubmit}>
-            <div className=' bg-white flex flex-no-wrap w-full py-2 px-2 rounded-xl justify-around'>
+            <div className='bg-white flex flex-no-wrap w-full py-2 px-2 rounded-xl justify-around'>
               <input value={keyword} type='text' placeholder='Busca un producto' className='focus:outline-none' onChange={handleInputChange} />
               <button type='submit' className='md:w-auto text-black py-1 px-3 text-center rounded-md hover:scale-90 transition duration-300'>Buscar</button>
             </div>
           </form>
         </div>
       </div>
-      <div className='lg:min-w-1000 w-full'>
+      <div className='px-5 sm:px-5 md:px-5 lg:px-0 max-w-4xl sm:max-w-4xl md:max-w-4xl lg:min-w-1000 w-full mx-auto'>
         <Products nProducts={nProducts} category={category} />
       </div>
     </div>

@@ -22,7 +22,9 @@ export default function TopProducts() {
     <>
       {products.map(product => {
         return (
-          <Product {... product} key={product.id} />
+          <div key={product.id}>
+            <Product {... product} />
+          </div>
         )
       })}
     </>

@@ -24,7 +24,7 @@ export default function CategoriesMenu() {
         const isLast = idx === categories.length - 1
         return (
           <div key={category} className='flex flex-direction-row gap-2 h-full place-items-center'>
-            <Link href={`/categories/${encodeURIComponent(category)}`} class='font-semibold hover:text-black uppercase text-xs'> {cat} </Link>
+            <Link href={`/categories/${encodeURIComponent(category)}`} className='font-semibold hover:text-teal-400 uppercase text-xs'> {cat} </Link>
             {!isLast
               ? <div className='border border-light-blue separator h-full border' />
               : <></>}

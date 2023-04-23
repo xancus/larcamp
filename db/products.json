@@ -22,7 +22,7 @@
         "slug": "adder-micro-past",
         "description": "test-description-adder-micro-past",
         "category": "body",
-        "image": "/products/ADDER micro past.PNG",
+        "image": "/products/ADDER micro past.png",
         "size":[]
     },
     {
@@ -31,7 +31,7 @@
         "slug": "amon-tox",
         "description": "test-description-amon-tox",
         "category": "floor",
-        "image": "/products/amon tox 5kg.PNG",
+        "image": "/products/amon tox 5kg.png",
         "size":["5kg"]
     }],
     "top_products":[1,3]

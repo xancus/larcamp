@@ -51,7 +51,7 @@ export default function ProductId () {
         <Header />
       </div>
 
-      <div className='max-w-7xl bg-white mx-auto mb-4 mt-8'>
+      <div className='sm:px-5 sm:max-w-4xl md:max-w-4xl lg:max-w-7xl bg-white mx-auto mb-4 mt-8'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4'>
           <section>
             <div className='p-8'>
@@ -103,7 +103,7 @@ export default function ProductId () {
         </div>
 
         <div className='absolute left-0 bg-gray-200 right-0'>
-          <div className='max-w-7xl mx-auto'>
+          <div className='sm:px-5 sm:max-w-4xl md:max-w-4xl lg:max-w-7xl mx-auto'>
             <h3 className='font-bold text-2xl text-center mb-8 mt-8'>Productos relacionados</h3>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4'>
               {relatedProducts.map(product => {
