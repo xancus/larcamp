@@ -31,7 +31,7 @@ export default function Products({ nProducts, category }) {
 
   return (
     <div className='mt-8'>
-      {productsSearched?.length > 0 && (
+      {productsSearched.length > 0 && (
         <section className='mt-8'>
           <h2 className='font-bold mb-4 sm:mb-4 sm:mb-8 text-muted text-center text-2xl'>Productos según tu búsqueda</h2>
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4'>

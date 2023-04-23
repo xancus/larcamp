@@ -1,4 +1,4 @@
-import { readJsonFile } from '@/pages/api/readJsonFile';
+import { readJsonFile } from './readJsonFile';
 
 export default async function productsByCategry(req, res) {
   if (req.method === 'POST') {

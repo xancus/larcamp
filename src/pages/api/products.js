@@ -5,7 +5,7 @@
     }
     return env
 } */
-import { readJsonFile } from '@/pages/api/readJsonFile';
+import { readJsonFile } from './readJsonFile';
 export default async function products(req, res) {
   const db = await readJsonFile()
   res.statusCode = 200;
