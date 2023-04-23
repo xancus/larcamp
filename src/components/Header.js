@@ -22,7 +22,7 @@ export default function Header() {
           <div className='flex justify-end w-full'>
             <button
               id='menu-toggle'
-              className={`${isOpen ? 'mt-32 mb-2' : 'mt-0'} flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white md:hidden lg:hidden}`}
+              className={`${isOpen ? 'mt-32 mb-2' : 'mt-0'} flex items-center px-3 py-2 border rounded text-gray-200 border-white hover:text-gray-400 hover:border-gray-400 md:hidden lg:hidden}`}
               onClick={handleToggle}
             >
               <svg className='fill-current h-3 w-3' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
@@ -45,12 +45,12 @@ export default function Header() {
             </div>
           </div>
           {isOpen && (
-            <div className='sm:flex flex-col items-center border rounded text-gray-200 border-gray-400 bg-teal-100 p-4 md:hidden'>
+            <div className='sm:flex flex-col items-center border rounded text-gray-200 border-white bg-teal-100 p-4 md:hidden'>
               <div className='flex flex-direction-row gap-4 h-full place-items-center'>
                 <Link href='/' className='font-semibold py-2 hover:text-teal-400 uppercase text-xs text-black'>Productos</Link>
               </div>
               <div className='flex flex-direction-row gap-4 h-full place-items-center'>
-                <Link href='#' className='font-semibold py-2  hover:text-teal-400 uppercase text-xs text-black'>Quiénes somos</Link>
+                <Link href='/info' className='font-semibold py-2  hover:text-teal-400 uppercase text-xs text-black'>Quiénes somos</Link>
               </div>
               <div className='flex flex-direction-row gap-4 h-full place-items-center'>
                 <Link href='#' className='font-semibold py-2 hover:text-teal-400 uppercase text-xs text-black'>Realiza tu pedido</Link>

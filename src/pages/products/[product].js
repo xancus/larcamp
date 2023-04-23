@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Product from '@/components/Product'
 import Header from '@/components/Header'
 import { Inter } from 'next/font/google'
+import Footer from '@/components/Footer'
 
 const font = Inter({
   weight: ['400', '700'],
@@ -46,19 +47,19 @@ export default function ProductId () {
   }, [productData?.category])
 
   return (
-    <div className='mb-8'>
+    <div>
       <div className='bg-light-blue mx-auto'>
         <Header />
       </div>
 
-      <div className='sm:px-5 sm:max-w-4xl md:max-w-4xl lg:max-w-7xl bg-white mx-auto mb-4 mt-8'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4'>
+      <div className='sm:max-w-4xl px-5 sm:px-5 md:px-5 lg:px-0 md:max-w-4xl lg:max-w-5xl lg:max-w-7xl mx-auto'>
+        <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4'>
           <section>
             <div className='p-8'>
               <Image src={productData?.image} alt={productData?.name} width={300} height={300} className='max-w-xs md:max-w-lg' />
             </div>
           </section>
-          <section>
+          <section className='mb-8 mt-0 sm:mt-0 sm:mt-8'>
             <h2 className={`font-bold text-4xl mb-4 text-gray-900 ${font.className}`}>
               {productData?.name}
             </h2>
@@ -102,9 +103,9 @@ export default function ProductId () {
           </section>
         </div>
 
-        <div className='absolute left-0 bg-gray-200 right-0'>
-          <div className='sm:px-5 sm:max-w-4xl md:max-w-4xl lg:max-w-7xl mx-auto'>
-            <h3 className='font-bold text-2xl text-center mb-8 mt-8'>Productos relacionados</h3>
+        <div className='pb-12 absolute left-0 bg-gray-200 right-0'>
+          <div className='sm:max-w-4xl px-5 sm:px-5 md:px-5 lg:px-0 md:max-w-4xl lg:max-w-5xl lg:max-w-7xl mx-auto'>
+            <h3 className='font-bold text-2xl text-center mb-4 mt-4 sm:mb-4 sm:mt-4 md:mt-8 md:mb-8'>Productos relacionados</h3>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4'>
               {relatedProducts.map(product => {
                 return (
@@ -113,9 +114,10 @@ export default function ProductId () {
               })}
             </div>
           </div>
+          <div className='absolute w-full mt-8'><Footer /></div>
         </div>
-
       </div>
     </div>
+
   )
 }
