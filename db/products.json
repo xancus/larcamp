@@ -32,7 +32,25 @@
         "description": "test-description-amon-tox",
         "category": "floor",
         "image": "/products/amon tox 5kg.png",
-        "size":["5kg"]
+        "size":["5kg", "10kg"]
+    },
+    {
+        "id": 5,
+        "name": "Stel Ultra 5kg",
+        "slug": "stel-ultra-5kg",
+        "description": "test-description-stel-ultra-5kg",
+        "category": "cocina",
+        "image": "/products/STEL ULTRA 5kg tox.png",
+        "size":["5kg", "750cc"]
+    },
+    {
+        "id": 6,
+        "name": "Stel Ultra 750cc",
+        "slug": "stel-ultra-750cc",
+        "description": "test-description-stel-ultra-750",
+        "category": "cocina",
+        "image": "/products/STEL ULTRA 5kg+750cc.PNG",
+        "size":["5kg", "750cc"]
     }],
     "top_products":[1,3]
 }
