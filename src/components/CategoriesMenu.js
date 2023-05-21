@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
+import useFilter from '../hooks/useFilter'
+// import Link from 'next/link'
+// import { products as initialProducts } from '../../db/products.json'
 
-export default function CategoriesMenu() {
+export default function CategoriesMenu({ initialProducts }) {
   const [categories, setCategories] = useState([])
+  const { setFilters } = useFilter()
 
   useEffect(() => {
-    fetch('/api/products', {
+    /* fetch('/api/products', {
       cache: 'no-store',
       next: {
         revalidate: 60
@@ -14,8 +17,10 @@ export default function CategoriesMenu() {
       .then(res => res.json())
       .then(data => {
         setCategories([...new Set(data.products.map(prod => prod.category))])
-      })
-  }, [])
+      }) */
+    // <Link href={`/categories/${encodeURIComponent(category)}`} className='font-bold hover:text-teal-400 uppercase text-xs text-gray-600'> {cat} </Link>
+    setCategories([...new Set(initialProducts.map(prod => prod.category))])
+  }, [initialProducts])
 
   return (
     <div className='flex items-center bg-teal-100 h-12 justify-center gap-4 flex-row flex-no-wrap'>
@@ -24,7 +29,12 @@ export default function CategoriesMenu() {
         const isLast = idx === categories.length - 1
         return (
           <div key={category} className='flex flex-direction-row gap-2 h-full place-items-center'>
-            <Link href={`/categories/${encodeURIComponent(category)}`} className='font-semibold hover:text-teal-400 uppercase text-xs'> {cat} </Link>
+            <h3
+              onClick={() => setFilters({ category: cat })}
+              className='font-bold hover:text-teal-400 uppercase text-xs text-gray-600'
+            > {cat}
+            </h3>
+
             {!isLast
               ? <div className='border border-light-blue separator h-full border' />
               : <></>}

@@ -67,7 +67,7 @@ export default function ProductId () {
             {productData?.size.length > 0 && (
               <div className='flex items-center mb-8'>
                 <div>
-                  <p className='mr-5'>
+                  <p className='mr-5 font-bold text-lg text-black'>
                     Tamaños del producto
                     <button className='relative' onClick={() => setShowInfo(!showInfo)}>
                       <i className='fas fa-info-circle ml-2' />
@@ -89,12 +89,12 @@ export default function ProductId () {
             )}
 
             <div className='flex flex-row flex-wrap gap-2 items-center'>
-              <h3 className='font-bold text-lg'>Categoría:</h3> <span>{productData?.category}</span>
+              <h3 className='font-bold text-lg text-black'>Categoría:</h3> <span className='text-black'>{productData?.category}</span>
             </div>
 
             <div className='flex flex-row flex-wrap gap-2 items-center'>
-              <h3 className='font-bold text-lg'>Características:</h3>
-              <p>{productData?.description}</p>
+              <h3 className='font-bold text-lg text-black'>Características:</h3>
+              <p className='text-black'>{productData?.description}</p>
             </div>
 
             <div className='mt-4'>
@@ -105,7 +105,7 @@ export default function ProductId () {
 
         <div className='pb-12 absolute left-0 bg-gray-200 right-0'>
           <div className='sm:max-w-4xl px-5 sm:px-5 md:px-5 lg:px-0 md:max-w-4xl lg:max-w-5xl lg:max-w-7xl mx-auto'>
-            <h3 className='font-bold text-2xl text-center mb-4 mt-4 sm:mb-4 sm:mt-4 md:mt-8 md:mb-8'>Productos relacionados</h3>
+            <h3 className='font-bold text-2xl text-center mb-4 mt-4 sm:mb-4 sm:mt-4 md:mt-8 md:mb-8 text-black'>Productos relacionados</h3>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4'>
               {relatedProducts.map(product => {
                 return (
