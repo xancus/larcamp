@@ -2,14 +2,19 @@ import { IS_DEVELOPMENT } from '@/config/config'
 import Image from 'next/image'
 import Link from 'next/link'
 import useFilter from '@/hooks/useFilter'
+import useCart from '@/hooks/useCart'
 
 export default function Footer () {
   const { filters } = useFilter()
+  const { cart } = useCart()
   return (
-    <section className='bg-light-blue mx-auto'>
+    <footer className='bg-light-blue mx-auto'>
       {
         IS_DEVELOPMENT &&
-        (JSON.stringify(filters.category, null, 2))
+        (
+          JSON.stringify(filters.category, null, 2),
+          JSON.stringify(cart, null, 2)
+        )
       }
       <div className='px-5 sm:px-5 md:px-5 lg:px-0 mx-w-4xl sm:max-w-4xl md:max-w-6xl lg:min-w-1000 w-full mx-auto p-4 flex flex-row flex-wrap justify-between items-center'>
         <div id='images' className='flex flex-row w-full sm:w-full sm:w-full md:w-auto'>
@@ -27,6 +32,6 @@ export default function Footer () {
         <p>LARCAMP S.L.</p>
         <p>C/ CIRCUMVALACIÓ BAIXA, 16, 08290 CERDANYOLA DEL VALLÈS | BARCELONA | ESPAÑA T.: +34 936 925 871</p>
       </div>
-    </section>
+    </footer>
   )
 }

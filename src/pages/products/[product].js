@@ -7,6 +7,7 @@ import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
 import productsData from 'db/products.json'
 import useFilter from '@/hooks/useFilter'
+import useCart from '@/hooks/useCart'
 
 const font = Inter({
   weight: ['400', '700'],
@@ -15,13 +16,16 @@ const font = Inter({
 
 export default function ProductId () {
   const [products] = useState(productsData.products)
-  const { setFilters, filters } = useFilter()
   const [productData, setProductData] = useState()
   const [relatedProducts, setRelatedProducts] = useState([])
+  const [showInfo, setShowInfo] = useState(false)
+  // routers
   const router = useRouter()
   const { product } = router.query
-  const [showInfo, setShowInfo] = useState(false)
-  // recuperar información del producto y construir el div mostrando la info
+  // store
+  const { setFilters, filters } = useFilter()
+  const { setCart, removeCart } = useCart()
+
   useEffect(() => {
     fetch(`/api/products/${product}`, {
       cache: 'no-store',
@@ -54,10 +58,10 @@ export default function ProductId () {
     // filtrar per els possibles productes que es diuen com productData.name + prodSize eliminant previament el seu size si es que en té
     if (prodSize !== productData.size) {
       const productRelatedSize = products.filter(product => {
-        const lastIndex = productData.slug.lastIndexOf('-');
-        const nameToBuild = productData.slug.slice(0, lastIndex);
-        console.log(nameToBuild, productData, prodSize, product.slug === nameToBuild + '-' + prodSize)
-        return product.slug === nameToBuild + '-' + prodSize
+        const lastIndex = productData.slug.lastIndexOf('-')
+        const nameToBuild = productData.slug.slice(0, lastIndex)
+        const nameToCheck = nameToBuild + '-' + prodSize
+        return product.slug.toLowerCase() === nameToCheck.toLowerCase()
       })
       setFilters({
         selectedSize: {
@@ -120,7 +124,8 @@ export default function ProductId () {
               </div>
 
               <div className='mt-4'>
-                <button className='md:w-auto bg-teal-100 text-black py-1 px-3 text-center rounded-md hover:scale-110 transition duration-300'>🛒 Pedir</button>
+                <button onClick={() => setCart(productData)} className='md:w-auto bg-teal-100 text-black py-1 px-3 text-center rounded-md hover:scale-110 transition duration-300'>🛒 Pedir</button>
+                <button onClick={() => removeCart(productData)} className='md:w-auto bg-teal-100 text-black py-1 px-3 text-center rounded-md hover:scale-110 transition duration-300'>🛒 Eliminar</button>
               </div>
             </section>
           </div>

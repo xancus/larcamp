@@ -56,6 +56,9 @@ export default function Header() {
             <div className='flex flex-direction-row gap-4 h-full place-items-center'>
               <Link href='/contact' className='font-bold py-2 hover:text-teal-100 uppercase text-xs text-gray-600'>Realiza tu pedido</Link>
             </div>
+            <div className='flex flex-direction-row gap-4 h-full place-items-center'>
+              <Link href='/cart' className='font-bold py-2 hover:text-teal-100 uppercase text-xs text-gray-600'>🛒</Link>
+            </div>
           </div>
 
           {isOpen && (

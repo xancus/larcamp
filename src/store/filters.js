@@ -1,4 +1,10 @@
 import { create } from 'zustand'
+// export const cartInitialState = JSON.parse(localStorage.getItem('cart')) || []
+let cartInitialState = []
+if (typeof window !== 'undefined') {
+  updateLocalStorage([])
+  cartInitialState = JSON.parse(localStorage.getItem('cart')) || []
+}
 
 export const useFilterStore = create((set, get) => ({
   filters: {
@@ -19,3 +25,50 @@ export const useFilterStore = create((set, get) => ({
     }))
   }
 }))
+
+export const useCartStore = create((set, get) => ({
+  cart: cartInitialState,
+  setCart: (item) => {
+    set((state) => {
+      const { cart } = state
+      const existingItem = cart.find((cartItem) => cartItem.id === item.id)
+
+      if (existingItem) {
+        const updatedCart = cart.map((cartItem) =>
+          cartItem.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            : cartItem
+        )
+        updateLocalStorage(updatedCart)
+        return { cart: updatedCart }
+      } else {
+        const updatedCart = [...cart, { ...item, quantity: 1 }]
+        updateLocalStorage(updatedCart)
+        return { cart: updatedCart };
+      }
+    })
+  },
+  removeCart: (item) => {
+    set((state) => {
+      const { cart } = state
+      const existingItem = cart.find((cartItem) => cartItem.id === item.id)
+      if (existingItem.quantity > 1) {
+        const updatedCart = cart.map((cartItem) =>
+          cartItem.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity - 1 }
+            : cartItem
+        )
+        updateLocalStorage(updatedCart)
+        return { cart: updatedCart }
+      } else {
+        const updatedCart = cart.filter(el => el.id !== item.id)
+        updateLocalStorage(updatedCart)
+        return { cart: updatedCart }
+      }
+    })
+  }
+}))
+
+function updateLocalStorage (state) {
+  window.localStorage.setItem('cart', JSON.stringify(state))
+}
