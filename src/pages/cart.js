@@ -22,7 +22,9 @@ export default function Cart() {
             cart.map(element => {
               return (
                 <div key={element.id} className='flex flex-row py-6 mx-6 gap-x-4 flex-wrap border-b border-gray-300'>
-                  <Image src={element.image} alt={element.name} className='max-w-[250px] h-48 object-contain' height={500} width={500} />
+                  <Link href={`/products/${encodeURIComponent(element.id)}`}>
+                    <Image src={element.image} alt={element.name} className='max-w-[250px] h-48 object-contain' height={500} width={500} />
+                  </Link>
                   <div>
                     <h3 className='font-bold text-lg text-black'>{element.name}</h3>
                     <p className='text-black'>{element.description}</p>

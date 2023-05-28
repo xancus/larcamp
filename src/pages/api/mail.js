@@ -1,8 +1,20 @@
 import { mailOptions, transporter } from '../../config/nodemailer'
 
 const generateEmailContent = (data) => {
-  const htmlD = `<p>Has recibido un mensaje por la web de este mail: ${data.email}</p> \n \n<h4>Mesaje:</h4><p>${data.message}</p>`
-  return { html: htmlD }
+  const html1 = `
+  <h4>Has rebut una comanda a través de la pàgina web</h4>
+  <p>El mail de la persona és:  ${data.email}</p> \n \n
+  <h4>Els productes que ha demanat són:</h4>`
+  const htmlProd = data.products.map(prod => {
+    return `<p style='margin: 0'>${prod.name} i n'ha demanat un total de: ${prod.quantity}</p>`
+  })
+  const html2 = htmlProd + `
+   \n \n
+  <h4>Si ha deixat un missatge el veuràs aquí a sota:</h4>
+  <p>${data.message}
+  </p>
+  `
+  return { html: html1 + html2 }
 }
 
 export default async function mail(req, res) {
@@ -10,7 +22,7 @@ export default async function mail(req, res) {
     const data = req.body
     // const captcha = await verifyRecaptcha(data.token)
 
-    if (!data.name || !data.email || !data.subject || !data.message) {
+    if (!data.name || !data.email || !data.subject || !data.products) {
       return res.status(400).json({ message: 'Bad request: Missing some values' })
     }
     try {
