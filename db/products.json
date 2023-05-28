@@ -27,7 +27,7 @@
     },
     {
         "id": 4,
-        "name": "Amon Tox",
+        "name": "Amon Tox 5kg",
         "slug": "amon-tox",
         "description": "test-description-amon-tox",
         "category": "floor",
@@ -40,7 +40,7 @@
         "slug": "stel-ultra-5kg",
         "description": "test-description-stel-ultra-5kg",
         "category": "cocina",
-        "image": "/products/STEL ULTRA 5kg tox.png",
+        "image": "/products/stel_ultra_5kg.png",
         "size":["5kg", "750cc"]
     },
     {

@@ -9,7 +9,7 @@ export default function CookieConsent () {
       <div className='bg-light-blue mx-auto px-12'>
         <Header changeFilters={setFilters} />
       </div>
-      <div className='px-5 sm:px-5 md:px-5 lg:px-0 max-w-4xl sm:max-w-4xl md:max-w-6xl lg:min-w-1000 w-full mx-auto'>
+      <div className='px-5 sm:px-5 md:px-5 lg:px-1 max-w-4xl sm:max-w-4xl md:max-w-6xl lg:min-w-1000 w-full mx-auto'>
         <div className='mt-8'>
           <h2 className='font-bold mb-8 text-muted text-2xl text-left text-slate-900'>POLITICA DE COOKIES</h2>
           <p className='text-lg text-justify text-slate-900'>

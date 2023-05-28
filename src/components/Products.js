@@ -39,7 +39,7 @@ export default function Products({ filteredProducts }) {
       {filters.productsSearched.length > 0 && (
         <section className='mt-8'>
           <h2 className='font-bold mb-4 sm:mb-4 sm:mb-8 text-muted text-center text-2xl text-black border-gray-300 border-b sm:border-b md:border-0 lg:border-0 pb-4'>Productos según tu búsqueda</h2>
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
             {filters.productsSearched.map(product => {
               return (
                 <Product {... product} key={product.id} />
@@ -51,7 +51,7 @@ export default function Products({ filteredProducts }) {
 
       <section className='mt-8'>
         <h2 className='font-bold mb-4 sm:mb-4 sm:mb-8 text-muted text-center text-2xl text-black border-gray-300 border-b sm:border-b md:border-0 lg:border-0 pb-4'>{title}</h2>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
           {filteredProducts.map(product => {
             return (
               <Product {... product} key={product.id} />
@@ -62,7 +62,7 @@ export default function Products({ filteredProducts }) {
 
       <section className='mt-8 mb-8'>
         <h2 className='font-bold mb-4 sm:mb-4 sm:mb-8 text-muted text-center text-2xl text-black border-gray-300 border-b sm:border-b md:border-0 lg:border-0 pb-4'>Productos destacados</h2>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
           <TopProducts />
         </div>
       </section>

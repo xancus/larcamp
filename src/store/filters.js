@@ -1,10 +1,4 @@
 import { create } from 'zustand'
-// export const cartInitialState = JSON.parse(localStorage.getItem('cart')) || []
-let cartInitialState = []
-if (typeof window !== 'undefined') {
-  updateLocalStorage([])
-  cartInitialState = JSON.parse(localStorage.getItem('cart')) || []
-}
 
 export const useFilterStore = create((set, get) => ({
   filters: {
@@ -27,7 +21,7 @@ export const useFilterStore = create((set, get) => ({
 }))
 
 export const useCartStore = create((set, get) => ({
-  cart: cartInitialState,
+  cart: [],
   setCart: (item) => {
     set((state) => {
       const { cart } = state
@@ -47,6 +41,9 @@ export const useCartStore = create((set, get) => ({
         return { cart: updatedCart };
       }
     })
+  },
+  initializeCartFromLocalStorage: (item) => {
+    set({ cart: item })
   },
   removeCart: (item) => {
     set((state) => {
@@ -70,5 +67,7 @@ export const useCartStore = create((set, get) => ({
 }))
 
 function updateLocalStorage (state) {
-  window.localStorage.setItem('cart', JSON.stringify(state))
+  if (typeof window !== 'undefined') {
+    window.localStorage.setItem('LarCart', JSON.stringify(state))
+  }
 }

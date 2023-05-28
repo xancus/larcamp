@@ -9,9 +9,9 @@ export default function Info () {
       <div className='bg-light-blue mx-auto px-12'>
         <Header changeFilters={setFilters} />
       </div>
-      <div className='px-5 sm:px-5 md:px-5 lg:px-0 max-w-4xl sm:max-w-4xl md:max-w-6xl lg:min-w-1000 w-full mx-auto'>
+      <div className='px-5 sm:px-5 md:px-5 lg:px-1 max-w-4xl sm:max-w-4xl md:max-w-6xl lg:min-w-1000 w-full mx-auto'>
         <div className='mt-8'>
-          <h2 className='font-bold mb-8 text-muted text-2xl text-left text-slate-900'>QUIÉNES SOMOS</h2>
+          <h2 className='font-bold mb-8 text-muted text-2xl text-left text-slate-900'>QUIENES SOMOS</h2>
           <p className='text-lg text-justify text-slate-900'>Larcamp fue fundada después de tiempos difíciles, en 1998, por Juan. A raíz de una mala experiencia profesional, se vio obligado a empezar de cero, fundando la empresa y dándole el nombre de Larcamp.
             Fue asesorado por profesionales del sector de la industria, a los cuales siempre les estará agradecido por la ayuda.
             Los principios fueron duros, pero priorizando siempre el buen servicio al cliente y la atención personalizada,

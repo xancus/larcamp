@@ -12,7 +12,7 @@ export default function Header() {
   }
 
   return (
-    <div className='sm:max-w-4xl px-5 sm:px-5 md:px-5 lg:px-0 md:max-w-4xl lg:max-w-5xl lg:max-w-7xl mx-auto'>
+    <div className='sm:max-w-4xl px-5 sm:px-5 md:px-5 lg:px-1 md:max-w-4xl lg:max-w-5xl lg:max-w-7xl mx-auto'>
       <nav className='flex items-center justify-between py-3 max-h-[100px]'>
         <div className='flex items-center'>
           <Link href='/'>
@@ -50,14 +50,15 @@ export default function Header() {
               <div className='border border-teal-100 separator h-full border' />
             </div>
             <div className='flex flex-direction-row gap-4 h-full place-items-center'>
-              <Link href='/info' className='font-bold hover:text-teal-100 uppercase text-xs text-gray-600'>Quiénes somos</Link>
+              <Link href='/info' className='font-bold hover:text-teal-100 uppercase text-xs text-gray-600'>Quienes somos</Link>
               <div className='border border-teal-100 separator h-full border' />
             </div>
             <div className='flex flex-direction-row gap-4 h-full place-items-center'>
               <Link href='/contact' className='font-bold py-2 hover:text-teal-100 uppercase text-xs text-gray-600'>Realiza tu pedido</Link>
+              <div className='border border-teal-100 separator h-full border' />
             </div>
             <div className='flex flex-direction-row gap-4 h-full place-items-center'>
-              <Link href='/cart' className='font-bold py-2 hover:text-teal-100 uppercase text-xs text-gray-600'>🛒</Link>
+              <Link href='/cart' className='font-bold py-2 hover:text-teal-100 uppercase text-sm text-gray-600 hover:scale-110 transition duration-300'>🛒</Link>
             </div>
           </div>
 
@@ -67,7 +68,7 @@ export default function Header() {
                 <Link href='/' className='font-bold py-2 hover:text-teal-400 uppercase text-xs text-black text-gray-600'>Productos</Link>
               </div>
               <div className='flex flex-direction-row gap-4 h-auto place-items-center p-2 px-4 border-b border-gray-400 w-full'>
-                <Link href='/info' className='font-bold py-2  hover:text-teal-400 uppercase text-xs text-black text-gray-600'>Quiénes somos</Link>
+                <Link href='/info' className='font-bold py-2  hover:text-teal-400 uppercase text-xs text-black text-gray-600'>Quienes somos</Link>
               </div>
               <div className='flex flex-direction-row gap-4 h-auto place-items-center p-2 px-4 border-b border-gray-400 w-full'>
                 <Link href='/contact' className='font-bold py-2 hover:text-teal-400 uppercase text-xs text-black text-gray-600'>Realiza tu pedido</Link>

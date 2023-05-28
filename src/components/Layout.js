@@ -42,7 +42,7 @@ export default function Layout({ filteredProducts }) {
           </form>
         </div>
       </div>
-      <div className='px-5 sm:px-5 md:px-5 lg:px-0 max-w-4xl sm:max-w-4xl md:max-w-4xl lg:min-w-1000 w-full mx-auto'>
+      <div className='px-5 sm:px-5 md:px-5 lg:px-1 max-w-4xl sm:max-w-4xl md:max-w-4xl lg:min-w-1000 w-full mx-auto'>
         <Products filteredProducts={filteredProducts} nProducts={nProducts} />
       </div>
     </div>
