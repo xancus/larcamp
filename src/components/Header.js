@@ -28,7 +28,7 @@ export default function Header() {
               id='menu-toggle'
               data-collapse-toggle='navbar-hamburger'
               type='button'
-              className={`${isOpen ? 'mt-6 mr-6 mb-2 border-gray-400 text-gray-400' : 'mt-0'} flex items-center px-3 py-2 border  rounded text-gray-200 border-white hover:bg-gray-300 dark:hover:bg-gray-700 hover:border-gray-400 md:hidden lg:hidden}`}
+              className={`${isOpen ? 'mt-6 mr-6 mb-2 border-gray-400 text-gray-400' : 'mt-0'} flex items-center px-3 py-2 border rounded text-gray-200 border-white hover:bg-gray-300 dark:hover:bg-gray-700 hover:border-gray-400 md:hidden lg:hidden}`}
               aria-controls='navbar-hamburger'
               aria-expanded='false'
               onClick={handleToggle}
@@ -63,15 +63,18 @@ export default function Header() {
           </div>
 
           {isOpen && (
-            <div className='translate-x-0 sm:flex flex-col items-center rounded text-gray-200 bg-teal-100 md:hidden h-full w-full'>
-              <div className='flex flex-direction-row gap-4 h-auto place-items-center p-2 px-4 border-b border-gray-400 w-full'>
+            <div className='sm:flex flex-col items-center rounded text-gray-200 bg-teal-100 md:hidden h-full w-full'>
+              <div onClick={() => setTimeout(() => setIsOpen(!isOpen), 2000)} className='flex flex-direction-row gap-4 h-auto place-items-center p-2 px-4 border-b border-gray-400 w-full'>
                 <Link href='/' className='font-bold py-2 hover:text-teal-400 uppercase text-xs text-black text-gray-600'>Productos</Link>
               </div>
-              <div className='flex flex-direction-row gap-4 h-auto place-items-center p-2 px-4 border-b border-gray-400 w-full'>
+              <div onClick={() => setTimeout(() => setIsOpen(!isOpen), 2000)} className='flex flex-direction-row gap-4 h-auto place-items-center p-2 px-4 border-b border-gray-400 w-full'>
                 <Link href='/info' className='font-bold py-2  hover:text-teal-400 uppercase text-xs text-black text-gray-600'>Quienes somos</Link>
               </div>
-              <div className='flex flex-direction-row gap-4 h-auto place-items-center p-2 px-4 border-b border-gray-400 w-full'>
-                <Link href='/contact' className='font-bold py-2 hover:text-teal-400 uppercase text-xs text-black text-gray-600'>Realiza tu pedido</Link>
+              <div onClick={() => setTimeout(() => setIsOpen(!isOpen), 2000)} className='flex flex-direction-row gap-4 h-auto place-items-center p-2 px-4 border-b border-gray-400 w-full'>
+                <Link href='/contact' className='font-bold py-2 hover:text-teal-400 uppercase text-xs text-black text-gray-600'>Realiza tu pedidoa</Link>
+              </div>
+              <div onClick={() => setTimeout(() => setIsOpen(!isOpen), 2000)} className='flex flex-direction-row gap-4 h-auto place-items-center p-2 px-4 border-b border-gray-400 w-full'>
+                <Link href='/cart' className='font-bold py-2 hover:text-teal-100 uppercase text-sm text-gray-600 hover:scale-110 transition duration-300'>🛒</Link>
               </div>
             </div>
           )}

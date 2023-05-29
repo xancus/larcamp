@@ -3,7 +3,7 @@ import { create } from 'zustand'
 export const useFilterStore = create((set, get) => ({
   filters: {
     category: 'all',
-    subcategory: 'all',
+    subcategory: ['all'],
     selectedSize: { id: 0, selected: false },
     productsSearched: []
   },

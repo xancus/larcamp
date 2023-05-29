@@ -6,7 +6,7 @@ export default function Info () {
   const { setFilters } = useFilter()
   return (
     <section className='mb-8'>
-      <div className='bg-light-blue mx-auto px-12'>
+      <div className='bg-light-blue mx-auto'>
         <Header changeFilters={setFilters} />
       </div>
       <div className='px-5 sm:px-5 md:px-5 lg:px-1 max-w-4xl sm:max-w-4xl md:max-w-6xl lg:min-w-1000 w-full mx-auto'>

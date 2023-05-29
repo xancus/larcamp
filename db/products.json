@@ -6,6 +6,7 @@
         "slug": "adder-dermo-eco",
         "description": "test-description",
         "category": "body",
+        "subcategory": "Sub Categoria de Prova Body3",
         "image": "/products/ADDER DERMO ECO_5L_GARRAFA BLANCA.png",
         "size":[]
     },{
@@ -14,6 +15,7 @@
         "slug": "adder-dermo-light-5l",
         "description": "test-description-adder-dermo-light",
         "category": "body",
+        "subcategory": "Sub Categoria de Prova Body 2",
         "image": "/products/ADDER DERMO ECO_5L_GARRAFA BLANCA.png",
         "size":["5L"]
     },{
@@ -22,6 +24,7 @@
         "slug": "adder-micro-past",
         "description": "test-description-adder-micro-past",
         "category": "body",
+        "subcategory": "Sub Categoria de Prova Body",
         "image": "/products/ADDER micro past.png",
         "size":[]
     },
@@ -31,6 +34,7 @@
         "slug": "amon-tox",
         "description": "test-description-amon-tox",
         "category": "floor",
+        "subcategory": "Sub Categoria de Prova Floor",
         "image": "/products/amon tox 5kg.png",
         "size":["5kg", "10kg"]
     },
@@ -40,6 +44,7 @@
         "slug": "stel-ultra-5kg",
         "description": "test-description-stel-ultra-5kg",
         "category": "cocina",
+        "subcategory": "Sub Categoria de Prova",
         "image": "/products/stel_ultra_5kg.png",
         "size":["5kg", "750cc"]
     },
@@ -49,6 +54,7 @@
         "slug": "stel-ultra-750cc",
         "description": "test-description-stel-ultra-750",
         "category": "cocina",
+        "subcategory": "no se que posar",
         "image": "/products/STEL ULTRA 5kg+750cc.PNG",
         "size":["5kg", "750cc"]
     }],

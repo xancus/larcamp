@@ -16,7 +16,7 @@ export default function Cart() {
         <Header changeFilters={setFilters} />
       </div>
       <div className='sm:max-w-4xl px-5 sm:px-5 md:px-5 lg:px-2 md:max-w-4xl lg:max-w-5xl lg:max-w-7xl mx-auto flex flex-row gap-4 flex-wrap'>
-        <div className='bg-white border-gray-300 border mt-4 min-w-[35rem] basis-3/5 grow'>
+        <div className='bg-white border-gray-300 border mt-4 basis-3/5 grow'>
           <h2 className='text-muted text-left text-2xl text-black font-bold mt-8 ml-8 mr-8 border-b border-gray-300 pb-2'>Carrito</h2>
           {cart.length > 0 && (
             cart.map(element => {

@@ -2,15 +2,18 @@ import { IS_DEVELOPMENT } from '@/config/config'
 import Image from 'next/image'
 import Link from 'next/link'
 import useCart from '@/hooks/useCart'
+import useFilter from '@/hooks/useFilter'
 
 export default function Footer () {
   const { cart } = useCart()
+  const { filters } = useFilter()
   return (
     <footer className='bg-light-blue mx-auto'>
       {
         IS_DEVELOPMENT &&
         (
-          JSON.stringify(cart, null, 2)
+          JSON.stringify(cart, null, 2),
+          JSON.stringify(filters, null, 2)
         )
       }
       <div className='px-5 sm:px-5 md:px-5 lg:px-1 mx-w-4xl sm:max-w-4xl md:max-w-6xl lg:min-w-1000 w-full mx-auto p-4 flex flex-row flex-wrap justify-between items-center'>

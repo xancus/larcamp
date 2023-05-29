@@ -30,8 +30,8 @@ export default function CategoriesMenu({ initialProducts }) {
         return (
           <div key={category} className='flex flex-direction-row gap-2 h-full place-items-center'>
             <h3
-              onClick={() => setFilters({ category: cat })}
-              className='font-bold hover:text-teal-400 uppercase text-xs text-gray-600'
+              onClick={() => setFilters({ category: cat, subcategory: ['all'] })}
+              className='font-bold hover:text-teal-400 uppercase text-xs text-gray-600 cursor-pointer'
             > {cat}
             </h3>
 

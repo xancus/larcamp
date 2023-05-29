@@ -1,6 +1,7 @@
 import useFilter from '@/hooks/useFilter'
 import Products from './Products'
 import { useState } from 'react'
+import Subcategories from './Subcategories'
 
 export default function Layout({ filteredProducts }) {
   const [keyword, setKeyword] = useState('')
@@ -41,6 +42,7 @@ export default function Layout({ filteredProducts }) {
             </div>
           </form>
         </div>
+        <Subcategories filteredProducts={filteredProducts} />
       </div>
       <div className='px-5 sm:px-5 md:px-5 lg:px-1 max-w-4xl sm:max-w-4xl md:max-w-4xl lg:min-w-1000 w-full mx-auto'>
         <Products filteredProducts={filteredProducts} nProducts={nProducts} />

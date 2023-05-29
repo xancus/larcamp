@@ -105,11 +105,11 @@ export default function ContactForm() {
 
   return (
     <section className='mb-8 h-screen'>
-      <div className='bg-light-blue mx-auto px-12'>
+      <div className='bg-light-blue mx-auto'>
         <Header changeFilters={setFilters} />
       </div>
       <div className='max-w-7xl mx-auto pb-5 h-full flex flex-row gap-4 flex-wrap'>
-        <div className='min-w-[35rem] basis-3/5 grow bg-gray-100 p-4'>
+        <div className='basis-3/5 grow bg-gray-100 p-4'>
           <ToastContainer />
           <FormControl isRequired isInvalid={touched.name && !name} mb={5}>
             <FormLabel htmlFor='name' color='black'>Nombre </FormLabel>
