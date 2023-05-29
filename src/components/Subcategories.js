@@ -16,8 +16,7 @@ export default function Subcategories({ filteredProducts }) {
   // className='font-bold hover:text-teal-400 uppercase text-xs text-gray-600 cursor-pointer'
   return (
     <div>
-      {filteredProducts.map((prod, idx) => {
-        const isLast = idx === filteredProducts.length - 1
+      {filteredProducts.map((prod) => {
         return (
           <div key={prod.id}>
             <label
@@ -31,22 +30,20 @@ export default function Subcategories({ filteredProducts }) {
               />
               {prod.subcategory}
             </label>
-            {isLast
-              ? <label
-                  className='font-bold text-gray-600 hover:text-teal-600 uppercase text-xs cursor-pointer flex items-center p-2 border-b border-gray-400 w-full'
-                >
-                <input
-                  type='checkbox'
-                  checked={filters.subcategory.includes('all')}
-                  onChange={() => handleCheckboxChange('all')}
-                  className='mr-2'
-                />
-                Todas
-              </label>
-              : <></>}
           </div>
         )
       })}
+      <label
+        className='font-bold text-gray-600 hover:text-teal-600 uppercase text-xs cursor-pointer flex items-center p-2 border-b border-gray-400 w-full'
+      >
+        <input
+          type='checkbox'
+          checked={filters.subcategory.includes('all')}
+          onChange={() => handleCheckboxChange('all')}
+          className='mr-2'
+        />
+        Todas
+      </label>
     </div>
   )
 }
