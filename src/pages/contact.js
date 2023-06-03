@@ -110,6 +110,9 @@ export default function ContactForm() {
       </div>
       <div className='max-w-7xl mx-auto pb-5 h-full flex flex-row gap-4 flex-wrap'>
         <div className='basis-3/5 grow bg-gray-100 p-4'>
+          <p className='text-slate-900'>El envío de este formulario no implica la compra del producto por lo que no pediremos ningún dato relacionado con tu cuenta bancaria.
+            Este formulario se utiliza únicamente para ponerse en contacto con la nosotros y recibir una factura de respuesta correspondiente.
+          </p><br />
           <ToastContainer />
           <FormControl isRequired isInvalid={touched.name && !name} mb={5}>
             <FormLabel htmlFor='name' color='black'>Nombre </FormLabel>
@@ -193,6 +196,13 @@ export default function ContactForm() {
             />
           </FormControl>
           <ReCAPTCHA className='mb-4' size='normal' sitekey='6LeNGSgmAAAAADI8AbnmtB1ed3wuAKY2qMIJlU6u' onChange={handleRecaptchaChange} />
+          <Checkbox
+            className='border-black'
+          >
+            <Link href='/avisoLegal' className='text-black'>
+              Acepto la Política de Privacidad
+            </Link>
+          </Checkbox><br /><br />
           <Button
             variant='outline'
             colorScheme='white'

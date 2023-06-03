@@ -23,10 +23,8 @@ export default function AvisoLegal () {
 
             La LOPD (Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal y Real Decreto 1720/2007, de 21 de diciembre, el Reglamento de desarrollo de la LOPD) que regula el tratamiento de los datos personales y las obligaciones que debemos asumir los responsables de una web o un blog a la hora de gestionar esta información.
 
-            La LSSI (Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico) que regula las transacciones económicas mediante medios electrónicos, como es el caso de este blog.
-
             DATOS DE IDENTIFICACIÓN
-
+            El sitio web se puede acceder sin necesidad de registro previo. Antes de enviar cualquier solicitud de información a través del formulario de contacto de este sitio web, el usuario debe aceptar la política de privacidad, otorgando su consentimiento expreso e informado para el procesamiento de sus datos con los fines indicados.
             El responsable y titular de este sitio web es LARCAMP, S.L.U. (En adelante LARCAMP, S.L.U)
 
             Nombre:  LARCAMP, S.L.U.
